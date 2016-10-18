@@ -1,0 +1,100 @@
+/*fonts*/
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.eot');
+    /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+body {
+    /*    background: #ebebeb;*/
+}
+
+
+/*header*/
+header {
+    text-align: center;
+    padding: 0 .468rem;
+    border-bottom: 1px solid #e3e3e3;
+    font-size: .469rem;
+    font-weight: bold;
+    line-height: 1.375rem;
+}
+
+header .back {
+    float: left;
+    color: #666;
+    font-size: .4375rem;
+}
+/*loignWrap*/
+#loignWrap{
+    overflow: hidden;
+    margin-bottom: 2.8rem;
+}
+#loignWrap .choose{
+    width: 6.25rem;
+    height: 1px;
+    background: #e2e2e2;
+    margin-top:2.03rem;
+    position: relative;
+    left: 50%;
+    margin-left: -3.125rem;
+    margin-bottom: .797rem;
+}
+#loignWrap .choose p{
+    position: absolute;
+    font-size: .375rem;
+    line-height: .475rem;
+    color: #666;
+    top: -.1875rem;
+    background: #fff;
+    left: 50%;
+    margin-left: -.89rem;
+
+}
+
+#loignWrap .option{
+    width: 7.5rem;
+    height: 1.25rem;
+    text-align: center;
+    margin: 0 auto .3125rem;
+    border-radius: 10px;
+    line-height: 1.25rem;
+    font-size: .4375rem;
+}
+
+#loignWrap .option i{
+    font-size: .4375rem;
+}
+/*footer*/
+.clearBar {
+    clear: both;
+    border: 1px solid #e2e2e2;
+    background: #f4f4f4;
+    height: .313rem;
+}
+footer p {
+    color: #999;
+    text-align: center;
+    font-size: .296rem;
+    line-height: .6rem;
+}
+
+footer p:nth-child(1) {
+    margin: .656rem 0 0 0;
+}
+
+footer p a {
+    color: #666;
+    padding: 0 .3125rem;
+    font-size: .42rem;
+}
+
+footer p:nth-child(4) {
+    margin-bottom: .625rem;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>meteorLibrary-details</title>
+<!--    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">-->
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="fonts/ux_1473410227_276362/iconfont.css">
+    <link rel="stylesheet" href="css/details.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/flexible.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="iconfont back">&#xe63a;</a> 书籍详情
+    </header>
+    <aside>
+        <img src="images/pic1.jpg" alt="">
+        <div class="right">
+            <p>超级兵王</p>
+            <p><span>作者</span>步千帆</p>
+            <p><span>分类</span>都市言情</p>
+            <p><span>状态</span>完结</p>
+            <span class="read"><a href="">阅读</a></span>
+            <span class="addShelf">加入书架</span>
+        </div>
+    </aside>
+    <p class="clearBar"></p>
+    <article>
+        <h3 style="color:#ee4f5c;">简介</h3>
+        <p>他，超级兵王，横扫一切，以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介</p>
+    </article>
+    <p class="clearBar"></p>
+    <section>
+        <h3>目录 <span> 共330章</span></h3>
+        <ul id="sectionList">
+            <!--
+            <li><a href="article.html">第001章<span>劫机</span></a></li>
+            <li><a href="">第001章<span>劫机</span></a></li>
+            <li><a href="">第001章<span>劫机</span></a></li>
+            <li><a href="">第001章<span>劫机</span></a></li>
+            <li><a href="">第001章<span>劫机</span></a></li>
+            <li><a href="">第001章<span>劫机</span></a></li>
+            <li><a href="">第001章<span>劫机</span></a></li>
+            <li><a href="">第001章<span>劫机</span></a></li>
+            <li><a href="">第001章<span>劫机</span></a></li>
+            <li><a href="">第001章<span>劫机</span></a></li>
+-->
+        </ul>
+        <p class="select">
+            <!--  添加类名  -->
+            <span class="pageUp">上一页</span>
+            <span class="pageDown">下一页</span>
+            <input type="text">
+            <span class="pageGo">跳转</span>
+            <span class="page"><span class="nowPage">1</span>/<span class="totalPage"></span></span>
+        </p>
+    </section>
+    <p class="clearBar"></p>
+    <footer>
+        <p>
+            <a href="">流星</a>-
+            <a href="" style="color:#ee4f5c;">书城</a>-
+            <a href="recharge.html">充值</a>-
+            <a href="">退出</a>
+        </p>
+        <p>京ICP备15019114号-1</p>
+        <p>京网文（2016）2092-240号</p>
+        <p>哎呦互娱旗下粉色书城版权</p>
+    </footer>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type: 'get',
+            url: 'text.json',
+            //        dataType: '',
+            success: function (data) {
+                /*每页显示个数*/
+                var perPage = 10;
+
+                /*共几页*/
+                for (var i = 0; i < Math.ceil(data.length / perPage); i++) {
+                    $('.totalPage').html(i);
+                }
+                /*初始加载10条*/
+                for (var i = 0; i < perPage; i++) {
+                    $('#sectionList').append("<li><a href=''>第" + data[i].id + "章<span>" + data[i].name + "</span></a></li>");
+                }
+                /*下一页*/
+                $('.pageDown').on('click', function () {
+                    var nowPage = parseInt($('.nowPage').html());
+                    var totalPage = parseInt($('.totalPage').html());
+                    if (nowPage >= totalPage) {
+                        $('.nowPage').html(totalPage);
+                    } else {
+                        document.body.scrollTop = 0;
+                        $('.nowPage').html(nowPage + 1);
+                        $('#sectionList').html('');
+                        for (var i = 0 + nowPage * perPage; i < perPage + nowPage * perPage; i++) {
+                            $('#sectionList').append("<li><a href=''>第" + data[i].id + "章<span>" + data[i].name + "</span></a></li>");
+                        }
+                    }
+                });
+                /*上一页*/
+                $('.pageUp').on('click', function () {
+                    var nowPage = parseInt($('.nowPage').html());
+                    var totalPage = parseInt($('.totalPage').html());
+
+                    if (nowPage <= 1) {
+                        $('.nowPage').html(1);
+                    } else {
+                        document.body.scrollTop = 0;
+                        $('.nowPage').html(nowPage - 1);
+                        $('#sectionList').html('');
+                        for (var i = 0 + nowPage * perPage; i < perPage + nowPage * perPage; i++) {
+                            $('#sectionList').append("<li><a href=''>第" + data[i].id + "章<span>" + data[i].name + "</span></a></li>");
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
+
+</html>

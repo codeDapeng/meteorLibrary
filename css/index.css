@@ -1,0 +1,380 @@
+/*fonts*/
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.eot');
+    /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+body {
+    /*    background: #ebebeb;*/
+}
+
+
+/*header*/
+
+header {
+    overflow: hidden;
+}
+
+header .logo {
+    float: left;
+    width: 3.468rem;
+    margin: 0.625rem 0 0 0.468rem;
+}
+
+header ul {
+    float: right;
+    height: 0.78rem;
+    line-height: 0.78rem;
+    /*    width: 30rem;*/
+    margin: 0.625rem 0.468rem 0 0;
+    /*
+    border: 1px solid #e2e2e2;
+    border-radius: 40px;
+*/
+}
+
+header ul li {
+    /*    width: 15rem;*/
+    /*    padding: 0 3.75rem;*/
+    text-align: center;
+    float: left;
+    line-height: 0.78rem;
+    /*    border: 1px solid #333;*/
+}
+
+header ul a {
+    color: #333;
+    font-size: 0.375rem;
+    /*    width: 100%;*/
+    display: inline-block;
+    line-height: 0.25rem;
+    text-align: center;
+    padding: 0 0.375rem;
+}
+
+header ul a span {
+    color: #666;
+    display: inline-block;
+    width: 2.5rem;
+    padding: 0.2rem 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+header ul a i {
+    float: left;
+    padding: 0.2rem 0;
+    font-size: 0.375rem!important;
+}
+
+header nav {
+    width: 100%;
+    margin: 1.6rem 0 0 0;
+}
+
+header nav a {
+    color: #333;
+    display: inline-block;
+    width: 33.33%;
+    font-size: 0.5rem;
+    line-height: 1.125rem;
+    /*    padding: 0 1rem;*/
+    text-align: center;
+    float: left;
+}
+
+.colorRed {
+    color: #ee4f5c;
+    border-bottom: 2px solid #ee4f5c;
+}
+
+
+/*aside*/
+
+aside {}
+
+.slide {
+    position: relative;
+    /*    max-width: 640px;*/
+    overflow: hidden;
+    margin: 0 auto;
+    height: 3.4375rem;
+}
+
+.slide:after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 50%;
+}
+
+.slide ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide li {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 解决js阻塞页面显示首屏 */
+
+.slide li:first-child {
+    z-index: 1;
+}
+
+.slide li img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.slide .dot {
+    position: absolute;
+    left: 50%;
+    margin-left: -0.75rem;
+    bottom: 10px;
+    z-index: 5;
+    font-size: 0;
+}
+
+.slide .dot span {
+    display: inline-block;
+    width: 0.3rem;
+    height: 0.3rem;
+    margin-left: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.slide .dot .cur {
+    background-color: #fff;
+}
+
+aside form .searchBtn {
+    line-height: 25px;
+    width: 70px;
+    background: skyblue;
+}
+
+
+/*article*/
+
+article {
+    /*    padding: 4.68rem;*/
+}
+
+.contentWrap {
+    margin: 0.468rem 0.468rem 0 0.468rem;
+    /*    padding: 10px;*/
+    /*    background: #fff;*/
+}
+
+.contentWrap h4 {
+    font-size: 0.468rem;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 0.312rem;
+    margin-bottom: 0.312rem;
+    /*    line-height: 35px;*/
+    color: #ee4f5c;
+}
+
+.contentWrap h4 span {
+    font-size: 0.343rem;
+    margin-left: 10px;
+    color: #ee4f5c;
+}
+
+.contentWrap .picList {
+    overflow: hidden;
+}
+
+.contentWrap .picList li {
+    /*    border: 1px solid #ccc;*/
+    width: 2.8125rem;
+    text-align: center;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.contentWrap .picList li:nth-child(3n-1) {
+    margin-left: 0.3125rem;
+    margin-right: 0.3125rem;
+}
+
+.contentWrap .picList li img {
+    width: 100%;
+    height: 3.75rem;
+    border: 1px solid #ccc;
+}
+
+.contentWrap .picList li p {
+    margin: 0.25rem 0 0.4rem 0;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.contentWrap .picList .listName {
+    font-size: 0.375rem;
+    color: #333;
+}
+
+.clearBar {
+    border: 1px solid #e2e2e2;
+    background: #f4f4f4;
+    height: 0.313rem;
+}
+
+
+/*detail*/
+
+.contentWrap .detail {
+    position: relative;
+    overflow: hidden;
+}
+
+.contentWrap .detail img {
+    width: 2.8125rem;
+    height: 3.75rem;
+    border: 1px solid #ccc;
+    float: left;
+    margin-right: 0.312rem;
+    margin-bottom: 0.375rem;
+}
+
+.contentWrap .detail div {
+    float: right;
+    width: 5.8rem;
+    height: 3.75rem;
+    /*    border: 1px solid #ccc;*/
+    position: relative;
+}
+
+.contentWrap .detail div .title {
+    font-weight: bold;
+    font-size: 0.42rem;
+    color: #333;
+    margin-bottom: 0.15rem;
+}
+
+/*
+.contentWrap .detail div p:nth-child(2) {
+    font-size: 0.375rem;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+*/
+
+/*
+.contentWrap .detail button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.53rem;
+    height: 0.781rem;
+    background: #ee4f5c;
+    border: none;
+    color: #fff;
+    font-size: 0.375rem;
+    border-radius: 5px;
+}
+*/
+
+/*
+.contentWrap .detail div p:nth-child(4) {
+    font-size: 0.375rem;
+    color: #333;
+    margin-bottom: 0.27rem;
+}
+*/
+
+/*
+.contentWrap .detail div p:nth-child(4) span {
+    font-size: 0.375rem;
+    color: #ee4f5c;
+    margin-right: 0.2rem;
+}
+*/
+
+.contentWrap .detail div .ctn {
+    font-size: 0.375rem;
+    color: #666;
+    height: 1.65rem;
+    line-height: 0.55rem;
+    /*    margin-bottom: 4rem;*/
+/*
+    position: absolute;
+    bottom: -5px;
+*/
+}
+
+.contentWrap .favoriteList {
+    clear: both;
+}
+
+.contentWrap .favoriteList li {
+    border-top: 1px solid #e2e2e2;
+    font-size: 0.375rem;
+    line-height: 1.375rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.contentWrap .favoriteList li span {
+    color: #333;
+    font-size: 0.375rem;
+    margin-right: 0.3125rem;
+    font-weight: bold;
+}
+
+.contentWrap .favoriteList li a {
+    color: #666;
+    font-size: 0.375rem;
+}
+
+
+/*footer*/
+
+footer p {
+    color: #999;
+    text-align: center;
+    font-size: 0.296rem;
+    line-height: 0.5rem;
+}
+
+footer p:nth-child(1) {
+    margin: 0.656rem 0 0.2rem 0;
+}
+
+footer p a {
+    color: #666;
+    padding: 0 0.3125rem;
+    font-size: 0.42rem;
+}
+
+footer p:nth-child(7) {
+    margin-bottom: 0.625rem;
+}

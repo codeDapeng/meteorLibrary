@@ -1,0 +1,99 @@
+/*fonts*/
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.eot');
+    /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+body {}
+
+
+/*header*/
+
+header {
+    text-align: center;
+    /*    padding: 0 .468rem;*/
+    /*    border-bottom: 1px solid #e3e3e3;*/
+    /*    font-size: .469rem;*/
+    /*    line-height: 1.375rem;*/
+    font-weight: bold;
+    margin-top: 0.9375rem;
+    margin-bottom: 0.3125rem;
+    font-size: 0.5rem;
+    color: #333;
+}
+
+
+/*article*/
+
+article {
+    padding: 0 0.468rem;
+}
+
+article p {
+    line-height: 0.6875rem;
+    color: #333;
+    font-size: 0.375rem;
+    text-indent: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+
+/*aside*/
+
+aside {
+    margin: 0.9375rem 0.468rem 0;
+    border-top: 1px solid #e2e2e2;
+    line-height: 1.375rem;
+}
+
+aside span {
+    font-size: 0.375rem;
+}
+
+aside span:nth-child(1) {
+    color: #999;
+    float: left;
+}
+
+aside span:nth-child(2) {
+    color: #ee4f5c;
+    float: right;
+}
+
+
+/*footer*/
+
+.clearBar {
+    clear: both;
+    border: 1px solid #e2e2e2;
+    background: #f4f4f4;
+    height: 0.313rem;
+}
+
+footer p {
+    color: #999;
+    text-align: center;
+    font-size: 0.296rem;
+    line-height: 0.6rem;
+}
+
+footer p:nth-child(1) {
+    margin: 0.656rem 0 0 0;
+}
+
+footer p a {
+    color: #666;
+    padding: 0 0.3125rem;
+    font-size: 0.42rem;
+}
+
+footer p:nth-child(4) {
+    margin-bottom: 0.625rem;
+}
