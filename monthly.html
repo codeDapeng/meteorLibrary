@@ -44,6 +44,10 @@
             <p>3.订购成功后书城不支持退款处理，请慎重购买。</p>
         </aside>
     </div>
+    <div id="content">
+        <img src="images/already.jpg" alt="">
+        <p id="hint" style="margin-bottom:4rem">您已经是包月用户</p>
+    </div>
     <p class="clearBar"></p>
     <footer>
         <p>
@@ -67,18 +71,18 @@
     </footer>
 
     <script>
-        $('.item').on('click',function(){
+        $('.item').on('click', function () {
             $('.item div').css({
-                display:'block'
+                display: 'block'
             });
             $('.item img').css({
-                display:'none'
+                display: 'none'
             });
             $(this).find('div').css({
-                display:'none'
+                display: 'none'
             });
             $(this).find('img').css({
-                display:'block'
+                display: 'block'
             })
         })
     </script>

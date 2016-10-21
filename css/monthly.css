@@ -93,7 +93,18 @@ header .back {
     line-height: 0.5156rem;
 }
 
-
+#content img{
+    width: 1.875rem;
+    height: 1.875rem;
+    display: block;
+    margin: 0 auto;
+}
+#content #hint{
+    font-size: 0.5rem;
+    color: #666;
+    text-align: center;
+    margin-top: 0.50rem;
+}
 .clearBar {
     border: 1px solid #e2e2e2;
     background: #f4f4f4;
