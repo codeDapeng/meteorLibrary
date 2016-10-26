@@ -234,6 +234,7 @@ article {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    text-align: center;
 }
 
 .contentWrap .picList .listName {
@@ -270,6 +271,7 @@ article {
     height: 3.75rem;
     /*    border: 1px solid #ccc;*/
     position: relative;
+    margin-top: 0.125rem;
 }
 
 .contentWrap .detail div .title {
@@ -279,6 +281,7 @@ article {
     margin-bottom: 0.15rem;
 }
 
+
 /*
 .contentWrap .detail div p:nth-child(2) {
     font-size: 0.375rem;
@@ -286,6 +289,7 @@ article {
     margin-bottom: 0.25rem;
 }
 */
+
 
 /*
 .contentWrap .detail button {
@@ -302,6 +306,7 @@ article {
 }
 */
 
+
 /*
 .contentWrap .detail div p:nth-child(4) {
     font-size: 0.375rem;
@@ -309,6 +314,7 @@ article {
     margin-bottom: 0.27rem;
 }
 */
+
 
 /*
 .contentWrap .detail div p:nth-child(4) span {
@@ -321,13 +327,19 @@ article {
 .contentWrap .detail div .ctn {
     font-size: 0.375rem;
     color: #666;
-    height: 1.65rem;
+    height: 2.65rem;
     line-height: 0.55rem;
     /*    margin-bottom: 4rem;*/
-/*
+    /*
     position: absolute;
     bottom: -5px;
 */
+    white-space: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
 
 .contentWrap .favoriteList {
@@ -337,17 +349,21 @@ article {
 .contentWrap .favoriteList li {
     border-top: 1px solid #e2e2e2;
     font-size: 0.375rem;
-    line-height: 1.375rem;
+/*    line-height: 1.375rem;*/
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    padding: 0.468rem 0;
 }
 
 .contentWrap .favoriteList li span {
     color: #333;
-    font-size: 0.375rem;
-    margin-right: 0.3125rem;
+    font-size: 0.42rem;
     font-weight: bold;
+    display: block;
+    width: 100%;
+    line-height: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .contentWrap .favoriteList li a {
