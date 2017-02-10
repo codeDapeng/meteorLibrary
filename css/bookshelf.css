@@ -72,7 +72,7 @@ header nav {
 header nav a {
     color: #333;
     display: inline-block;
-    width: 33.33%;
+    width: 25%;
     font-size: 0.5rem;
     line-height: 1.125rem;
 /*    padding: 0 1rem;*/
@@ -87,8 +87,23 @@ header nav a {
 
 
 /*aside*/
-
-
+.notice{
+    position: relative;
+    padding: .468rem .468rem 1.2rem .468rem;
+    background: #fff5e1;
+    color: #666668;
+    font-size: .375rem;
+}
+.notice p{
+    line-height: .5rem;
+}
+.notice .notice-btn{
+    position: absolute;
+    right: .468rem;
+    margin-top: .2rem;
+    width: 1.56rem;
+    height: .78rem;
+}
 /*article*/
 #wrapper {
     position:absolute; z-index:1;

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>meteorLibrary-details</title>
+    <!--    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">-->
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="fonts/ux_1473410227_276362/iconfont.css">
+    <link rel="stylesheet" href="css/details.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/flexible.js"></script>
+    <link rel="stylesheet" href="music-player/css/default.css">
+    <link rel="stylesheet" href="music-player/css/style.css" />
+    <link rel="stylesheet" href="music-player/css/audioplayer.css" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="iconfont back">&#xe63a;</a> 书籍详情
+    </header>
+<!--
+    <aside>
+        <img src="images/pic1.jpg" alt="">
+        <div class="right">
+            <p id="book-name">超级兵王</p>
+            <p><span>作者</span>步千帆</p>
+            <p><span>分类</span>都市言情</p>
+            <p><span>状态</span>完结</p>
+            <span class="read"><a href="">阅读</a></span>
+            <span class="addShelf">加入书架</span>
+        </div>
+    </aside>
+-->
+    <div id="listening-head">
+        <img class="listening-img" src="images/pic1.jpg" alt="">
+        <div class="listening-info">
+            <p class="listening-info-book">超级兵王</p>
+            <p class="listening-info-author">主播：<span>什么名字</span></p>
+            <p class="listening-info-date">2016年5月10日更新</p>
+        </div>
+        <div class="listening-cover"></div>
+    </div>
+<!--    <p class="clearBar"></p>-->
+    <article>
+<!--        <h3 style="color:#ee4f5c;">简介</h3>-->
+        <p>他，超级兵王，横扫一切，以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介以下全都是简介</p>
+    </article>
+    <p class="clearBar"></p>
+    <section class="listening-section">
+        <h3>目录 <span> 共330章</span></h3>
+        <ul id="sectionList">
+            <li index="1">第001章<span>劫机1</span></li>
+            <li index="2">第002章<span>劫机2</span></li>
+            <li index="3">第003章<span>劫机3</span></li>
+            <li index="4">第004章<span>劫机4</span></li>
+            <li index="5">第005章<span>劫机5</span></li>
+            <li>第001章<span>劫机</span></li>
+            <li>第001章<span>劫机</span></li>
+            <li>第001章<span>劫机</span></li>
+            <li>第001章<span>劫机</span></li>
+            <li>第001章<span>劫机</span></li>
+        </ul>
+        <p class="select">
+            <!--  添加类名  -->
+            <span class="pageUp">上一页</span>
+            <span class="pageDown">下一页</span>
+            <input type="text">
+            <span class="pageGo">跳转</span>
+            <span class="page"><span class="nowPage">1</span>/<span class="totalPage"></span></span>
+        </p>
+    </section>
+    <!--    <p class="clearBar"></p>-->
+    <!--  audio播放器  -->
+    <div class="htmleaf-container">
+        <div class="htmleaf-content bgcolor-3">
+            <div id="wrapper">
+                <div style="float:left;color:#fff;padding-left:0.5rem">
+                    <p id="name" style="font-size:0.45rem;line-height:0.8rem;">超级兵王</p>
+                    <p id="name-detail" style="font-size:0.35rem;">当前无播放</p>
+                </div>
+
+                <div id="btn-container" style="float:right">
+                    <span style="border-left:1px solid #111;border-right:1px solid #111;line-height:1.56rem;float:left;width:1.56rem;text-align:center">
+                    <img src="music-player/images/left_icon.png" id="up" style="width:0.5rem"></img>
+                    </span>
+                    <span style="float:left;line-height:1.56rem;width:1.56rem;padding:0 0.5rem">
+                    <img class="audioplayer-playpause" id="play" src="music-player/images/bofang_icon.png" alt="" style="width:0.5rem;padding-top:0.3rem">
+                    <img class="audioplayer-playpause" id="pause" src="music-player/images/zanting_icon.png" alt="" style="width:0.5rem;padding-top:0.3rem;display:none">
+                    </span>
+                    <span style="border-left:1px solid #111;border-right:1px solid #111;line-height:1.56rem;float:left;width:1.56rem;text-align:center">
+                    <img src="music-player/images/right_icon.png" id="down" style="width:0.5rem"></img>
+                    </span>
+                </div>
+                <audio id="audio" src="http://210.51.190.27:8085/audio/1/1.mp3" preload="auto" controls></audio>
+                <!--                        <script src="music-player/music-player/js/jquery.min.js"></script>-->
+                <script src="music-player/js/audioplayer.js"></script>
+                <script>
+                    $(function () {
+                        $('audio').audioPlayer();
+                        var nowPlay = 1;
+//                        var musicList = ["1.mp3", "2.mp3", "3.mp3", "4.mp3", "5.mp3"];
+                        /*音频地址前缀*/
+                        var musicUrl='http://210.51.190.27:8085/audio/1/';
+                        /*传入总音频数*/
+                        var totalMusicNum=5;
+                        var audio = document.getElementById('audio');
+                        /*播放*/
+                        $('#play').on('click', function () {
+                            $('#play').css({
+                                display: 'none'
+                            });
+                            $('#pause').css({
+                                display: 'block'
+                            });
+                            audio.play();
+                            $('.audioplayer').addClass('audioplayer-playing');
+                            $('#name-detail').html(nowPlay+'.mp3');
+                        });
+                        /*暂停*/
+                         $('#pause').on('click', function () {
+                            $('#play').css({
+                                display: 'block'
+                            });
+                            $('#pause').css({
+                                display: 'none'
+                            });
+                            audio.pause();
+//                            $('.audioplayer').addClass('audioplayer-playing');
+//                            $('#name-detail').html(musicList[nowPlay]);
+                        });
+                        /*上一首*/
+                        $('#up').on('click', function () {
+                            //                            $('.audioplayer-playpause').attr('title','play');
+                            $('#play').css({
+                                display: 'none'
+                            });
+                            $('#pause').css({
+                                display: 'block'
+                            });
+                            $('.audioplayer-time-current').html('00:00');
+                            if (nowPlay <= 1) {
+                                nowPlay = totalMusicNum;
+                            } else {
+                                nowPlay--;
+                            }
+                            $('audio').attr({
+                                src: musicUrl + nowPlay+'.mp3'
+                            });
+                            audio.play();
+                            $('.audioplayer').addClass('audioplayer-playing');
+                            $('#name-detail').html(nowPlay+'.mp3');
+                        });
+                        /*下一首*/
+                        $('#down').on('click', function () {
+                            $('#play').css({
+                                display: 'none'
+                            });
+                            $('#pause').css({
+                                display: 'block'
+                            });
+                            $('.audioplayer-time-current').html('00:00');
+                            if (nowPlay >= totalMusicNum) {
+                                nowPlay = 1;
+                            } else {
+                                nowPlay++;
+                            }
+//                            console.log(musicList[nowPlay])
+                            $('audio').attr({
+                                src: musicUrl + nowPlay+'.mp3'
+                            });
+                            audio.play();
+                            $('.audioplayer').addClass('audioplayer-playing');
+                            $('#name-detail').html(nowPlay+'.mp3');
+                        });
+                        /*点击列表播放*/
+                        $('#sectionList li').on('click',function(){
+                            var idx=$(this).attr('index');
+                            $('#play').css({
+                                display: 'none'
+                            });
+                            $('#pause').css({
+                                display: 'block'
+                            });
+                            nowPlay = idx;
+                            $('.audioplayer-time-current').html('00:00');
+                            $('audio').attr({
+                                src: musicUrl + idx+'.mp3'
+                            });
+                            audio.play();
+                            $('.audioplayer').addClass('audioplayer-playing');
+                            $('#name-detail').html(idx+'.mp3');
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+
+    </div>
+    <!--
+    <footer>
+        <p>
+            <a href="">流星</a>-
+            <a href="" style="color:#ee4f5c;">书城</a>-
+            <a href="recharge.html">充值</a>-
+            <a href="">退出</a>
+        </p>
+        <p>官方微信：流星书城网</p>
+        <p>版权合作：hezuo@qianbainuo.com</p>
+        <p>QQ：1394654016</p>
+        <p>Copyright 2016 qianbainuo.com All rights reserved.</p>
+        <p>流星书城版权所有</p>
+        <p>2016-10-09 19:38:36</p>
+    </footer>
+-->
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type: 'get',
+            url: 'text.json',
+            //        dataType: '',
+            success: function (data) {
+                /*每页显示个数*/
+                var perPage = 10;
+
+                /*共几页*/
+                for (var i = 0; i < Math.ceil(data.length / perPage); i++) {
+                    $('.totalPage').html(i);
+                }
+                /*初始加载10条*/
+                for (var i = 0; i < perPage; i++) {
+                    $('#sectionList').append("<li><a href=''>第" + data[i].id + "章<span>" + data[i].name + "</span></a></li>");
+                }
+                /*下一页*/
+                $('.pageDown').on('click', function () {
+                    var nowPage = parseInt($('.nowPage').html());
+                    var totalPage = parseInt($('.totalPage').html());
+                    if (nowPage >= totalPage) {
+                        $('.nowPage').html(totalPage);
+                    } else {
+                        document.body.scrollTop = 0;
+                        $('.nowPage').html(nowPage + 1);
+                        $('#sectionList').html('');
+                        for (var i = 0 + nowPage * perPage; i < perPage + nowPage * perPage; i++) {
+                            $('#sectionList').append("<li><a href=''>第" + data[i].id + "章<span>" + data[i].name + "</span></a></li>");
+                        }
+                    }
+                });
+                /*上一页*/
+                $('.pageUp').on('click', function () {
+                    var nowPage = parseInt($('.nowPage').html());
+                    var totalPage = parseInt($('.totalPage').html());
+
+                    if (nowPage <= 1) {
+                        $('.nowPage').html(1);
+                    } else {
+                        document.body.scrollTop = 0;
+                        $('.nowPage').html(nowPage - 1);
+                        $('#sectionList').html('');
+                        for (var i = 0 + nowPage * perPage; i < perPage + nowPage * perPage; i++) {
+                            $('#sectionList').append("<li><a href=''>第" + data[i].id + "章<span>" + data[i].name + "</span></a></li>");
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
+
+</html>
