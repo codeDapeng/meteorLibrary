@@ -1,4 +1,4 @@
-@import url(http://fonts.useso.com/css?family=Raleway:200,500,700,800);
+/*@import url(http://fonts.useso.com/css?family=Raleway:200,500,700,800);*/
 @font-face {
 	font-family: 'icomoon';
 	src:url('../fonts/icomoon.eot?rretjt');
@@ -60,6 +60,7 @@ a:hover,a:focus{color:#74777b;}
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 1.56rem;
 }
 .htmleaf-content {
 /*	padding: 1em 0;*/

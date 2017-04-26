@@ -20,6 +20,7 @@ body {
 
 header {
     overflow: hidden;
+    margin-bottom: 0.3125rem;
 }
 
 header .logo {
@@ -107,6 +108,7 @@ aside {}
     overflow: hidden;
     margin: 0 auto;
     height: 3.4375rem;
+    margin: 0 0.468rem;
 }
 
 .slide:after {
@@ -193,10 +195,12 @@ article {
 .contentWrap h4 {
     font-size: 0.468rem;
     border-bottom: 1px solid #e2e2e2;
-    padding-bottom: 0.312rem;
-    margin-bottom: 0.312rem;
+/*    padding-bottom: 0.312rem;*/
+    margin-bottom: 0.624rem;
     /*    line-height: 35px;*/
     color: #ee4f5c;
+    border-left: 4px solid #ee4f5c;
+    padding-left: 0.312rem;
 }
 
 .contentWrap h4 span {
@@ -234,14 +238,19 @@ article {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    text-align: center;
+/*    text-align: center;*/
 }
 
 .contentWrap .picList .listName {
     font-size: 0.375rem;
     color: #333;
 }
-
+.check-more{
+    font-size: 0.375rem;
+    color: #ee4f5c;
+    margin-bottom: 0.4rem;
+    display: block;
+}
 .clearBar {
     border: 1px solid #e2e2e2;
     background: #f4f4f4;

@@ -1,6 +1,6 @@
 
 .audioplayer {
-    margin: 10px 0;
+/*    margin: 10px 0;*/
     height: 2.4em;
     /* 40 */
     color: #fff;
@@ -9,7 +9,7 @@
     z-index: 1;
     background: #222;
 /*    display: none;*/
-    top: -0.5rem;
+    top: -0.65rem;
 }
 
 .audioplayer-mini {

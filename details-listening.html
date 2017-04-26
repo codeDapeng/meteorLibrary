@@ -80,7 +80,7 @@
         <div class="htmleaf-content bgcolor-3">
             <div id="wrapper">
                 <div style="float:left;color:#fff;padding-left:0.5rem">
-                    <p id="name" style="font-size:0.45rem;line-height:0.8rem;">超级兵王</p>
+                    <p id="name" style="font-size:0.45rem;width:3.7rem;line-height:0.8rem;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">超级兵王哈哈哈哈哈哈哈哈哈</p>
                     <p id="name-detail" style="font-size:0.35rem;">当前无播放</p>
                 </div>
 
@@ -152,11 +152,11 @@
                                 src: musicUrl + nowPlay+'.mp3'
                             });
                             audio.play();
-                            $('.audioplayer').addClass('audioplayer-playing');
+                            $('.audioplayer').addClass('audioplayer-playing') ;
                             $('#name-detail').html(nowPlay+'.mp3');
                         });
                         /*下一首*/
-                        $('#down').on('click', function () {
+                        $('#down').on('click',function () {
                             $('#play').css({
                                 display: 'none'
                             });
@@ -169,16 +169,17 @@
                             } else {
                                 nowPlay++;
                             }
-//                            console.log(musicList[nowPlay])
+//                            console.log(musicList[no   wPlay])
                             $('audio').attr({
                                 src: musicUrl + nowPlay+'.mp3'
                             });
                             audio.play();
-                            $('.audioplayer').addClass('audioplayer-playing');
+                            $('.audioplayer').addClass(' audioplayer-playing');
                             $('#name-detail').html(nowPlay+'.mp3');
                         });
                         /*点击列表播放*/
-                        $('#sectionList li').on('click',function(){
+                        $('#sectionList').delegate('li','click',function(){
+//                        $('#sectionList li').on('click',function(){
                             var idx=$(this).attr('index');
                             $('#play').css({
                                 display: 'none'
